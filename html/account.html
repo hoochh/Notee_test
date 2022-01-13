@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notee. Note Everything</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .accountcreator {
+            width: 970px;
+            display: flex;
+            flex-direction: column;
+            border-bottom: solid 1px;
+            margin: 10px 10px 10px 20px;
+        }
+        .account {
+            width: 600px;
+            margin-top: 50px;
+            text-align: left;
+        }
+        .accountbtn {
+            margin-top: 10px;
+            text-align: right;
+        }
+        fieldset { 
+            background-color: rgb(245, 245, 245);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="../img/main-logo.png" style="width: 300px; height: 45px" onclick="location.href='../index.html'">
+            </div>
+        </header>
+        <nav class="topMenu">
+            <ul>
+                <li class="home" onclick="location.href='../index.html'">HOME</li>
+                <li class="about" onclick="location.href='about.html'">ABOUT US</li>
+                <li class="note" onclick="location.href='mynote.html'">MY NOTE</li>
+                <li class="boardGallery" onclick="location.href='gallery.html'">GALLERY</li>
+                <li class="board" onclick="location.href='board.html'">BOARD</li>
+                <li class="faq" onclick="location.href='faq.html'">QnA</li>
+            </ul>
+        </nav>
+        <div class="center">
+            <section>
+                <article class="accountcreator">
+                    <div class="topline">
+                        <div class="top"></div>
+                        <div class="title">회원가입</div>
+                    </div>
+                    <div class="account">
+                        <form action="" method="get" name="memfrm">
+                            <fieldset>
+                                <legend>회원 정보 입력</legend>
+                                <p>
+                                    ID: <input type="text" name="memid" size="13">
+                                    <button type="button" onclick="alert('사용할 수 있는 아이디 입니다')">ID중복 검사</button>
+                                </p>
+                                <p>
+                                    PW: <input type="password" name="mempw" size="12">
+                                </p>
+                                <p>
+                                    이름: <input type="text" name="memname" size="12">
+                                </p>
+                                <p>생년월일: <input type="date" name="membday"></p>
+                                <p>
+                                    성별: <input type="radio" name="gender" value="male">남성
+                                    <input type="radio" name="gender" value="female">여성
+                                </p>
+                                <p>E-mail: <input type="email" name="email" size="29"></p>
+                                <p>
+                                    메일수신: <input type="radio" name="mailing" value="agree">수신동의
+                                    <input type="radio" name="mailing" value="disagree">수신거부
+                                </p>
+                                <p>
+                                    핸드폰: 
+                                    <select name="fhpnum">
+                                        <option value="010" selected>010</option>
+                                        <option value="011">011</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    -
+                                    <input type="text" name="sphnum" size="4">
+                                    -
+                                    <input type="text" name="tphnum" size="4">
+                                </p>
+                                <p>
+                                    직업: 
+                                    <select name="job">
+                                        <option value="" selected>직업을 선택하세요</option>
+                                        <option value="student" >학생</option>
+                                        <option value="salesman" >회사원</option>
+                                        <option value="etc" >기타</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    취미:
+                                    <input type="checkbox" name="hobby" value="shopping">쇼핑
+                                    <input type="checkbox" name="hobby" value="serfing">인터넷
+                                    <input type="checkbox" name="hobby" value="listening">음악감상
+                                    <input type="checkbox" name="hobby" value="reading">독서
+                                    <input type="checkbox" name="hobby" value="sports">스포츠
+                                </p>
+                                <p>
+                                    한줄소개:
+                                    <textarea name="txt" rows="5" cols="80"></textarea>
+                                </p>
+                            </fieldset>
+                            <div class="accountbtn">
+                                <input type="button" value="전송" onclick="checkForm()">
+                                <input type="reset" value="다시작성">
+                            </div>
+                        </form>
+                </article>
+            </section>
+            <aside>
+                <form action="" id="form">
+                    <div class="loginmsg">
+                        <table class="login" border="0">
+                            <tr class="logInput">
+                                <th colspan="2">Login</th>
+                            </tr>
+                            <tr class="idInput">
+                                <td>ID: </td>
+                                <td><input type="text" name="id" id="userid" size="15"></td>
+                            </tr>
+                            <tr class="pwInqut">
+                                <td>PW: </td>
+                                <td><input type="password" name="pw" id="userpw" size="15"></td>
+                            </tr>
+                            <tr class="subbtn">
+                                <td colspan="2">
+                                    <button type="button" onclick="loginTest()">login</button>
+                                    <button type="button" onclick="location.href='account.html'">join</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> 
+                </form>
+                <table class="blankT">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+                <table border="0">
+                    <tr>
+                        <td class="clock"></td>
+                    </tr>
+                </table>  
+                <!-- <div class="mainLogin">
+                    <div>login</div>
+                    <div class="login">ID: <input type="text" name="id" size="15"><br/></div>
+                    <div class="login">PW: <input type="text" name="pw" size="15"></div>
+                    <div class="login"><button type="button" name="submit">login</button></div>
+                </div> -->
+            </aside>
+        </div>
+        <footer>
+            <div class="copyr">copyright ©LYK All right is Reserved.</div>
+            <div class="snsLogo">
+                <img src="../img/instagram-logo.png" style="width: 25px; height: 25px" onclick="window.open('http://instagram.com')">
+                <img src="../img/facebook-logo.png" style="width: 25px; height: 25px" onclick="window.open('http://facebook.com')">
+        </footer>
+    </div>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script>
+        function loginTest() {
+            let id = document.getElementById('userid').value;
+            let pw = document.getElementById('userpw').value;
+
+            if (id != "abcd" || pw != "1234") {
+                alert("아이디와 비밀번호를 확인해주세요.(id: abcd, pw: 1234)");
+                return;
+            }
+            
+
+            $('table.login').remove();
+
+            let str = 
+                `abcd 님, <br>
+                환영합니다.`;
+
+            $('div.loginmsg').html(str);
+
+            //document.getElementById('form').submit(); //form 태그의 action 속성 요청
+        }
+    </script>
+    <script src="../js/joinsubmit.js"></script>
+    <script src = "../js/clock.js"></script> 
+</body>
+</html>

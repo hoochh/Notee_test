@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notee. Note Everything</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .qnawpost {
+            width: 970px;
+            display: flex;
+            flex-direction: column;
+            border-bottom: solid 1px;
+            margin: 10px 10px 10px 20px;
+        }
+        .qnapostBox {
+            width: 400px;
+            margin: 100px auto;
+            border: solid 1px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="../img/main-logo.png" style="width: 300px; height: 45px" onclick="location.href='../index.html'">
+            </div>
+        </header>
+        <nav class="topMenu">
+            <ul>
+                <li class="home" onclick="location.href='../index.html'">HOME</li>
+                <li class="about" onclick="location.href='about.html'">ABOUT US</li>
+                <li class="note" onclick="location.href='mynote.html'">MY NOTE</li>
+                <li class="boardGallery" onclick="location.href='gallery.html'">GALLERY</li>
+                <li class="board" onclick="location.href='board.html'">BOARD</li>
+                <li class="faq" onclick="location.href='faq.html'">QnA</li>
+            </ul>
+        </nav>
+        <div class="center">
+            <section>
+                <article class="qnawpost">
+                    <div class="topline">
+                        <div class="top"></div>
+                        <div class="title">QnA</div>
+                    </div>
+                    <div class="qnapostBox">
+                        <p>게시글이 없습니다...</p>
+                    </div>
+                </article>
+            </section>
+            <aside>
+                <form action="" id="form">
+                    <div class="loginmsg">
+                        <table class="login" border="0">
+                            <tr class="logInput">
+                                <th colspan="2">Login</th>
+                            </tr>
+                            <tr class="idInput">
+                                <td>ID: </td>
+                                <td><input type="text" name="id" id="userid" size="15"></td>
+                            </tr>
+                            <tr class="pwInqut">
+                                <td>PW: </td>
+                                <td><input type="password" name="pw" id="userpw" size="15"></td>
+                            </tr>
+                            <tr class="subbtn">
+                                <td colspan="2">
+                                    <button type="button" onclick="loginTest()">login</button>
+                                    <button type="button" onclick="location.href='account.html'">join</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+                <table class="blankT">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+                <table border="0">
+                    <tr>
+                        <td class="clock"></td>
+                    </tr>
+                </table>  
+                <!-- <div class="mainLogin">
+                    <div>login</div>
+                    <div class="login">ID: <input type="text" name="id" size="15"><br/></div>
+                    <div class="login">PW: <input type="text" name="pw" size="15"></div>
+                    <div class="login"><button type="button" name="submit">login</button></div>
+                </div> -->
+            </aside>
+        </div>
+        <footer>
+            <div class="copyr">copyright ©LYK All right is Reserved.</div>
+            <div class="snsLogo">
+                <img src="../img/instagram-logo.png" style="width: 25px; height: 25px" onclick="window.open('http://instagram.com')">
+                <img src="../img/facebook-logo.png" style="width: 25px; height: 25px" onclick="window.open('http://facebook.com')">
+        </footer>
+    </div>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script>
+        function loginTest() {
+            let id = document.getElementById('userid').value;
+            let pw = document.getElementById('userpw').value;
+
+            if (id != "abcd" || pw != "1234") {
+                alert("아이디와 비밀번호를 확인해주세요.(id: abcd, pw: 1234)");
+                return;
+            }
+            
+
+            $('table.login').remove();
+
+            let str = 
+                `abcd 님, <br>
+                환영합니다.`;
+
+            $('div.loginmsg').html(str);
+
+            //document.getElementById('form').submit(); //form 태그의 action 속성 요청
+        }
+    </script>
+    <script src = "../js/clock.js"></script> 
+</body>
+</html>

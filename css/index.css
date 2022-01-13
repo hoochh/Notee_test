@@ -1,0 +1,199 @@
+header, nav, section, aside, footer, .container {
+    /* border: solid 1px red; */
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 940px;
+    border: solid 1px;
+    margin: auto;
+}
+.newslist li, button, img:hover {
+    cursor: pointer;
+}
+header {
+    height: 75px;
+    background-color: lightblue;
+    position: relative;
+}
+header div {
+    position: absolute;
+    bottom: -5px;
+    left: 15px;
+}
+.topMenu {
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    background-color: lemonchiffon;
+    border-bottom: solid 1px;
+    border-top: double;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 5px;
+    padding: 0px 10px;
+    /* border: dashed 0.5px grey; */
+    font-size: small;
+    display: inline-block;
+    color: black;
+    line-height: 20px;
+}
+nav ul li:hover {
+    cursor: pointer;
+    color: palevioletred;
+    border-bottom: palevioletred solid 5px;
+}
+.center {
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: white;
+    height: 775px;
+}
+section article {
+    display: flex;
+    flex-direction: column;
+}
+section .topline {
+    background: url(../img/top-line.png) repeat;
+}
+section .top {
+    padding-left: 7px;
+    padding-bottom: 0px;
+}
+section .title {
+    margin: 0px;
+    margin-top: 25px;
+    padding: 0px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.newArticle {
+    width: 970px;
+    height: 450px;
+    background-color: white;
+    margin-top: 10px;
+    border-bottom: dashed 1px;
+}
+.newArticle .slideshow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.newArticle .mainArticle {
+    width: 700px;
+    height: 390px;
+    margin: 0px 30px;
+}
+div .mySlides {
+    position: relative;
+}
+.mySlides p {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    z-index: 1;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    opacity: 0.7;
+}
+.slidebtn:hover {
+    cursor: pointer;
+}
+.newsNotice {
+    width: 470px;
+    height: 300px;
+    background-color: white;
+    border-bottom: dashed 1px;
+}
+.newsNotice ul li{
+    border-bottom: solid 1px;
+}
+.gallery {
+    width: 470px;
+    height: 300px;
+    background-color: white;
+    border-bottom: dashed 1px;
+}
+.gallimg {
+    margin: 10px;
+}
+.gallcomm a {
+    color: black;
+    text-decoration: none;
+}
+.gallcomm a:hover {
+    color: palevioletred;
+    text-decoration: palevioletred;
+}
+aside {
+    width: 180px;
+    border-left: solid 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.loginmsg {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    margin-top: 20px;
+}
+.clock{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.blankT {
+    width: 180px;
+    margin: auto;
+}
+aside .idInput, .pwInput, .subbtn {
+    text-align: right;
+}
+footer {
+    display: flex;
+    align-items: flex-end;
+    height: 30px;
+    background-color: lightpink;
+    position: relative;
+    border-top: double;
+}
+footer .copyr {
+    position: absolute;
+    left: 10px;
+    margin-bottom: 5px;
+    /* line-height: 50px; */
+    font-size: 12px;
+}
+footer .snsLogo {
+    position: absolute;
+    right: 10px;
+    /* line-height: 5px; */
+}
